@@ -20,7 +20,7 @@ COPY sqlite.db /dashboard/data/
 RUN apt-get update &&\
     apt-get -y install openssh-server wget iproute2 vim git cron unzip supervisor nginx &&\
     
-    # Download and unzip the nez-agentha application
+    # Download and unzip the nezha-agentha application
     # Replaced backticks ` with $(command) syntax for the uname commands
     wget -O nezha-agent.zip https://github.com/naiba/nezha/releases/latest/download/nezha-agent_linux_$(uname -m | sed "s#x86_64#amd64#; s#aarch64#arm64#").zip &&\
     unzip nezha-agent.zip &&\
