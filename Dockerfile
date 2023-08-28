@@ -5,7 +5,7 @@ FROM ghcr.io/naiba/nezha-dashboard
 
 # Only one port is exposed
 # This line exposes port 80
-EXPOSE 80
+# EXPOSE 80
 
 WORKDIR /dashboard
 
