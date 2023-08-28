@@ -5,7 +5,7 @@ FROM ghcr.io/naiba/nezha-dashboard
 
 # Only one port is exposed
 # This line exposes port 80
-# EXPOSE 80
+EXPOSE 80
 
 WORKDIR /dashboard
 
@@ -52,4 +52,4 @@ RUN git config --global core.bigFileThreshold 1k && \
 # Set the entrypoint of the container to entrypoint.sh script
 ENTRYPOINT ["./entrypoint.sh"]
 
-USER 10001
+
