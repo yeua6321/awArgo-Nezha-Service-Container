@@ -29,7 +29,7 @@ oauth2:
   admin: $GH_USER
   clientid: $GH_CLIENTID
   clientsecret: $GH_CLIENTSECRET
-httpport: 10001
+httpport: 80
 grpcport: 5555
 grpchost: $DATA_DOMAIN
 proxygrpcport: 443
@@ -61,7 +61,7 @@ protocol: h2mux
 
 ingress:
   - hostname: $WEB_DOMAIN
-    service: http://localhost:10001
+    service: http://localhost:80
 $SSH_DISABLE  - hostname: $SSH_DOMAIN
 $SSH_DISABLE    service: ssh://localhost:22
   - hostname: $DATA_DOMAIN
