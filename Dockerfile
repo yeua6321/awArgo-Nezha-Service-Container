@@ -8,9 +8,9 @@ WORKDIR /app
 USER root
 #WORKDIR /app/dashboard
 
-COPY entrypoint.sh /dashboard/
+COPY entrypoint.sh /app/dashboard/
 
-COPY sqlite.db /dashboard/data/
+COPY sqlite.db /app/dashboard/data/
 
 RUN apt-get update &&\
     apt-get -y install openssh-server wget iproute2 vim git cron unzip supervisor systemctl nginx &&\
