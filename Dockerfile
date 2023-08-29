@@ -7,13 +7,13 @@ FROM ghcr.io/naiba/nezha-dashboard
 # This line exposes port 80
 EXPOSE 80
 
-WORKDIR /dashboard
+WORKDIR /app/dashboard
 USER root
 # Copy entrypoint.sh script to the /dashboard directory
-COPY entrypoint.sh /dashboard/
+COPY entrypoint.sh /app/dashboard/
 
 # Copy the sqlite.db file to the /dashboard/data directory
-COPY sqlite.db /dashboard/data/
+COPY sqlite.db /app/dashboard/data/
 
 # Install necessary packages for the image
 # Added missing packages iproute2, vim, git, cron, unzip, supervisor, and nginx
