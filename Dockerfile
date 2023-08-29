@@ -8,7 +8,7 @@ FROM ghcr.io/naiba/nezha-dashboard
 EXPOSE 80
 
 WORKDIR /dashboard
-
+USER root
 # Copy entrypoint.sh script to the /dashboard directory
 COPY entrypoint.sh /dashboard/
 
